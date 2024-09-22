@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { atom, useRecoilState } from 'recoil';
 
 const themeState = atom({
@@ -15,9 +15,13 @@ const DarkMode = () => {
   }, [theme]);
 
   return (
-    <div>
-      <p>나의 작고 귀여운 {theme === 'light' ? '다크' : '라이트'} 모드</p>
-      <div>현재 기분은 {theme === 'light' ? '🌝' : '🌚'}</div>
+    <div className='center'>
+      <p className='cute'>
+        나의 작고 귀여운 {theme === 'light' ? '라이트' : '다크'} 모드
+      </p>
+      <div className='emotion'>
+        현재 기분은 {theme === 'light' ? '🌝' : '🌚'} 이다
+      </div>
       <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
         테마 변경
       </button>
