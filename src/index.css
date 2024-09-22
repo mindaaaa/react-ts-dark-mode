@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,58 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+/* :root {
+  --background-color: white;
+  --text-color: black;
+}
+
+.dark-mode {
+  --background-color: black;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+} */
+
+/* 기본 테마 */
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+/* 다크 테마 */
+[data-theme='dark'] {
+  --background-color: black;
+  --text-color: white;
+}
+
+/* 세피아 테마 */
+[data-theme='sepia'] {
+  --background-color: #704214;
+  --text-color: #f5deb3;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
 }
