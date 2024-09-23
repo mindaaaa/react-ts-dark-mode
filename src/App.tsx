@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { atom, useRecoilState } from 'recoil';
 
 const themeState = atom({
@@ -7,7 +7,6 @@ const themeState = atom({
 });
 
 const DarkMode = () => {
-  // 전역 상태
   const [theme, setTheme] = useRecoilState(themeState);
 
   useEffect(() => {
